@@ -8,7 +8,7 @@ public:
         minbuy=prices[i];
         }
         else if(prices[i] - minbuy > maxprofit) {
-                maxprofit = prices[i] - minbuy;  // Found better profit
+                maxprofit = prices[i] - minbuy;  
             }
         }
         return maxprofit;
