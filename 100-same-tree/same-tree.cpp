@@ -12,16 +12,15 @@
 class Solution {
 public:
     bool isSameTree(TreeNode* p, TreeNode* q) {
-        // Both nodes are null — trees match here
-        if (!p && !q) return true;
+        if (!p && !q) {
+            return true;}
 
-        // One node is null and the other isn't — trees differ
-        if (!p || !q) return false;
+        if (!p || !q) {
+            return false;}
 
-        // Values differ — trees differ
-        if (p->val != q->val) return false;
+        if (p->val != q->val){
+         return false;}
 
-        // Recursively check left and right subtrees
         return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
     }
 };
